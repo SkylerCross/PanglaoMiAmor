@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooter & Motorbike Rentals - Panglao Mi Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .rental-section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .rental-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .rental-card {
+            background: var(--coconut-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);
+            border: 1px solid var(--sand-beige);
+        }
+        .rental-placeholder {
+            height: 220px;
+            background-color: var(--sand-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-weight: 500;
+        }
+        .rental-info {
+            padding: 25px;
+        }
+        .rental-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--sand-beige);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img" style="height: 60px; width: auto;">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="rentals.html" class="active">Motorbike Rental</a></li>
+                <li><a href="tours.html">Island Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Rentals Section -->
+    <main class="rental-section">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Explore Panglao On Two Wheels</h2>
+        <p style="text-align: center; color: var(--tropical-green); font-weight: 500;">Affordable, well-maintained scooter rentals for ultimate island freedom</p>
+
+        <div class="rental-grid">
+            <!-- Scooter 1 -->
+            <div class="rental-card">
+                <div class="rental-placeholder">
+                    <span>🛵 Scooter Photos Coming Soon</span>
+                </div>
+                <div class="rental-info">
+                    <span class="badge" style="color: var(--ocean-blue);">POPULAR CHOICE</span>
+                    <h3>125cc Automatic Scooter</h3>
+                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Incredibly easy to ride, lightweight, and fuel-efficient. Perfect for navigating the beach routes around Panglao and Alona Beach.</p>
+                    <a href="contact.html" class="btn btn-blue" style="display: block;">Reserve This Scooter</a>
+                </div>
+            </div>
+
+            <!-- Scooter 2 -->
+            <div class="rental-card">
+                <div class="rental-placeholder">
+                    <span>🏍️ Motorbike Photos Coming Soon</span>
+                </div>
+                <div class="rental-info">
+                    <span class="badge" style="color: var(--tropical-green);">EXTRA POWER</span>
+                    <h3>150cc Touring Motorbike</h3>
+                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Extra power and comfort for long-distance cruising. Ideal if you plan to drive up to the Chocolate Hills or explore the Bohol mainland loop.</p>
+                    <a href="contact.html" class="btn btn-blue" style="display: block;">Reserve This Bike</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
