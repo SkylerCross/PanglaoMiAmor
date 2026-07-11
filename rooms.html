@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Availability - Panglao Mi Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .room-section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .room-card {
+            background: var(--coconut-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);
+            border: 1px solid var(--sand-beige);
+        }
+        .room-placeholder {
+            height: 240px;
+            background-color: var(--sand-beige);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-weight: 500;
+        }
+        .room-info {
+            padding: 25px;
+        }
+        .room-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--deep-navy);
+        }
+        .calendar-section {
+            background-color: #F9F6EE;
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 2px solid var(--sand-beige);
+        }
+        .calendar-container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            border: 4px solid var(--sand-beige);
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img" style="height: 60px; width: auto;">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html" class="active">Rooms</a></li>
+                <li><a href="rentals.html">Motorbike Rental</a></li>
+                <li><a href="tours.html">Island Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Rooms List -->
+    <main class="room-section">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Our Accommodations</h2>
+        <p style="text-align: center; color: var(--ocean-blue); font-weight: 500;">Cozy spaces designed for your island stay</p>
+
+        <div class="room-grid">
+            <!-- Room 1 -->
+            <div class="room-card">
+                <div class="room-placeholder">
+                    <span>📷 Room Photos Coming Soon</span>
+                </div>
+                <div class="room-info">
+                    <h3>Standard Budget Room</h3>
+                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Perfect for solo backpackers and couples looking for an authentic, affordable hostel atmosphere close to the beaches.</p>
+                    <a href="contact.html" class="btn btn-coral" style="display: block;">Check Availability</a>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="room-card">
+                <div class="room-placeholder">
+                    <span>📷 Room Photos Coming Soon</span>
+                </div>
+                <div class="room-info">
+                    <h3>Deluxe Aircon Room</h3>
+                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Enjoy crisp air conditioning, extra privacy, and premium linens after a full day of island hopping.</p>
+                    <a href="contact.html" class="btn btn-coral" style="display: block;">Check Availability</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Google Calendar Live Sync Placeholder -->
+    <section class="calendar-section">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 32px;">Live Booking Calendar</h2>
+        <p style="max-width: 600px; margin: 10px auto 0 auto; font-size: 15px; color: #555;">
+            See our open slots in real-time. Check the calendar dates below before sending your reservation inquiry.
+        </p>
+        
+        <div class="calendar-container">
+            <!-- This is a live interactive placeholder calendar showing Philippine holidays. You will swap this with your real Google Calendar link later! -->
+            <iframe src="https://calendar.google.com/calendar/embed?src=en.philippines%23holiday%40group.v.calendar.google.com&ctz=Asia%2FManila" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

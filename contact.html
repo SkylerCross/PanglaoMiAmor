@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Bookings - Panglao Mi Amor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-section {
+            padding: 60px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+            margin-top: 40px;
+        }
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--deep-navy);
+        }
+        .info-item {
+            margin-bottom: 20px;
+        }
+        .info-item strong {
+            color: var(--ocean-blue);
+            display: block;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        /* Structural Booking Form styling */
+        .booking-form {
+            background: var(--coconut-white);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--sand-beige);
+            box-shadow: 0 6px 18px rgba(23, 63, 95, 0.04);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--sand-beige);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: 2px solid var(--ocean-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img" style="height: 60px; width: auto;">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="rentals.html">Motorbike Rental</a></li>
+                <li><a href="tours.html">Island Tours</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Contact/Inquiry Content -->
+    <main class="contact-section">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Let's Plan Your Getaway</h2>
+        <p style="text-align: center; color: var(--coral); font-weight: 500;">Drop us a message to secure your room, motorbike, or island tour slots</p>
+
+        <div class="contact-container">
+            <!-- Left Column: Direct Info -->
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p style="margin-bottom: 30px; color: #555;">Have questions before booking? Feel free to reach out directly through our local channels or use the inquiry form.</p>
+                
+                <div class="info-item">
+                    <strong>📍 LOCATION</strong>
+                    <p>Panglao Island, Bohol, Philippines</p>
+                </div>
+                <div class="info-item">
+                    <strong>📧 EMAIL</strong>
+                    <p>booking@panglaomiamor.com (Placeholder)</p>
+                </div>
+                <div class="info-item">
+                    <strong>📱 WHATSAPP / VIBER</strong>
+                    <p>+63 XXX XXX XXXX</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Structural Inquiry Form -->
+            <div class="booking-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">What are you booking?</label>
+                        <select id="service">
+                            <option value="room">Room Rental Only</option>
+                            <option value="scooter">Motorbike Rental Only</option>
+                            <option value="tour">Island Tour Package</option>
+                            <option value="all">The Whole Package (Room + Bike + Tour)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Dates & Special Requests</label>
+                        <textarea id="message" rows="4" placeholder="Let us know your target dates, arrival time, or scooter preference..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-coral" style="width: 100%; border: none; cursor: pointer;">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
