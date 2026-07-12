@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact & Bookings - Panglao Mi Amor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .contact-section {
@@ -12,27 +15,32 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 50px;
             margin-top: 40px;
         }
+
         .contact-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
             margin-bottom: 15px;
             color: var(--deep-navy);
         }
+
         .info-item {
             margin-bottom: 20px;
         }
+
         .info-item strong {
             color: var(--ocean-blue);
             display: block;
             font-size: 14px;
             letter-spacing: 1px;
         }
+
         /* Structural Booking Form styling */
         .booking-form {
             background: var(--coconut-white);
@@ -41,16 +49,21 @@
             border: 1px solid var(--sand-beige);
             box-shadow: 0 6px 18px rgba(23, 63, 95, 0.04);
         }
+
         .form-group {
             margin-bottom: 20px;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 6px;
             font-size: 14px;
             font-weight: 500;
         }
-        .form-group input, .form-group select, .form-group textarea {
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid var(--sand-beige);
@@ -58,11 +71,15 @@
             font-family: 'Poppins', sans-serif;
             font-size: 14px;
         }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: 2px solid var(--ocean-blue);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header Navigation -->
@@ -85,22 +102,25 @@
 
     <!-- Main Contact/Inquiry Content -->
     <main class="contact-section">
-        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Let's Plan Your Getaway</h2>
-        <p style="text-align: center; color: var(--coral); font-weight: 500;">Drop us a message to secure your room, motorbike, or island tour slots</p>
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Let's Plan Your Getaway
+        </h2>
+        <p style="text-align: center; color: var(--coral); font-weight: 500;">Drop us a message to secure your room,
+            motorbike, or island tour slots</p>
 
         <div class="contact-container">
             <!-- Left Column: Direct Info -->
             <div class="contact-info">
                 <h3>Get In Touch</h3>
-                <p style="margin-bottom: 30px; color: #555;">Have questions before booking? Feel free to reach out directly through our local channels or use the inquiry form.</p>
-                
+                <p style="margin-bottom: 30px; color: #555;">Have questions before booking? Feel free to reach out
+                    directly through our local channels or use the inquiry form.</p>
+
                 <div class="info-item">
                     <strong>📍 LOCATION</strong>
                     <p>Panglao Island, Bohol, Philippines</p>
                 </div>
                 <div class="info-item">
                     <strong>📧 EMAIL</strong>
-                    <p>booking@panglaomiamor.com (Placeholder)</p>
+                    <p>panglaoroomrentalph@gmail.com</p>
                 </div>
                 <div class="info-item">
                     <strong>📱 WHATSAPP / VIBER</strong>
@@ -108,20 +128,24 @@
                 </div>
             </div>
 
-            <!-- Right Column: Structural Inquiry Form -->
+            <!-- Right Column: Structural Inquiry Form (Powered by Web3Forms & Google Sheets) -->
             <div class="booking-form">
-                <form action="#" method="POST">
+                <form id="contactForm">
+                    <!-- Web3Forms Access Key Hidden Input -->
+                    <input type="hidden" name="access_key" value="68d96adb-1fb2-49eb-83f7-a66aa6124943">
+
+                    <!-- Form Fields -->
                     <div class="form-group">
                         <label for="name">Your Full Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
+                        <input type="text" id="name" name="Guest Name" required placeholder="John Doe">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
+                        <input type="email" id="email" name="Guest Email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
                         <label for="service">What are you booking?</label>
-                        <select id="service">
+                        <select id="service" name="Inquiry Type">
                             <option value="room">Room Rental Only</option>
                             <option value="scooter">Motorbike Rental Only</option>
                             <option value="tour">Island Tour Package</option>
@@ -130,11 +154,105 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Dates & Special Requests</label>
-                        <textarea id="message" rows="4" placeholder="Let us know your target dates, arrival time, or scooter preference..."></textarea>
+                        <textarea id="message" name="Guest Message" rows="4"
+                            placeholder="Let us know your target dates, arrival time, or scooter preference..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-coral" style="width: 100%; border: none; cursor: pointer;">Send Inquiry</button>
+                    <button type="submit" class="btn btn-coral" style="width: 100%; border: none; cursor: pointer;">Send
+                        Inquiry</button>
                 </form>
             </div>
+
+            <!-- Premium Tropical Success Modal Popup -->
+            <div id="successModal"
+                style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+                <div
+                    style="background-color: #fff; padding: 2.5rem; border-radius: 12px; max-width: 450px; width: 90%; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 6px solid var(--coral, #ff6f61); animation: fadeIn 0.3s ease-in-out;">
+                    <div style="font-size: 3.5rem; margin-bottom: 1rem;">🌴</div>
+                    <h3
+                        style="font-family: 'Playfair Display', serif; color: var(--deep-navy, #0b1d33); margin-bottom: 0.75rem; font-size: 1.6rem;">
+                        Salamat!</h3>
+                    <p
+                        style="font-family: 'Poppins', sans-serif; color: #555; line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Thank you for reaching out to Panglao Mi Amor! Your inquiry has been sent successfully. We will
+                        get back to you soon.</p>
+                    <button id="closeModalBtn" class="btn btn-coral"
+                        style="padding: 0.75rem 2rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; background-color: var(--coral, #ff6f61); color: white;">Great</button>
+                </div>
+            </div>
+
+            <!-- Script to handle background submission to BOTH Email (Web3Forms) & Google Sheets -->
+            <script>
+                const form = document.getElementById('contactForm');
+                const modal = document.getElementById('successModal');
+                const closeModalBtn = document.getElementById('closeModalBtn');
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault(); // Stop the page from reloading
+
+                    const formData = new FormData(form);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+
+                    // 1. Send to Web3Forms for Email Delivery
+                    const emailPromise = fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    });
+
+                    // 2. Send to Google Sheets via your custom Apps Script Webhook
+                    const sheetPromise = fetch('https://script.google.com/macros/s/AKfycbxRhcMnjQixJ5A9GHDkO9e8UzPvrRtUFwXvjsf8aeEvklKjJQkEWucJ4zw-2wkU8OcbwQ/exec', {
+                        method: 'POST',
+                        mode: 'no-cors', // Essential for handling anonymous cross-origin submissions to Google
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: json
+                    });
+
+                    // Fire both requests together in the background
+                    Promise.all([emailPromise, sheetPromise])
+                        .then(() => {
+                            // Display your premium success modal popup
+                            modal.style.display = "flex";
+                            form.reset(); // Clean the inputs for the next guest
+                        })
+                        .catch(error => {
+                            console.error('Submission error:', error);
+                            alert("Form submission failed. Please try again later.");
+                        });
+                });
+
+                // Click 'Great' to close the premium modal
+                closeModalBtn.addEventListener('click', function () {
+                    modal.style.display = "none";
+                });
+
+                // Click anywhere outside the box to close it too
+                window.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            </script>
+
+            <!-- Tiny CSS Animation helper for the smooth popup display -->
+            <style>
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.95);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            </style>
         </div>
     </main>
 
@@ -143,4 +261,5 @@
     </footer>
 
 </body>
+
 </html>
