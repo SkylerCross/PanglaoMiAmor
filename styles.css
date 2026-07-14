@@ -29,6 +29,12 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--sand-beige);
+    
+    /* 📌 This keeps the header floating at the top */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps it layered above images and text when scrolling */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Adds a subtle shadow so it separates cleanly from the content behind it */
 }
 
 .brand-title {
@@ -46,6 +52,21 @@ header {
     font-size: 10px;
     letter-spacing: 2px;
     color: var(--deep-navy);
+}
+
+.logo-img {
+    max-height: 60px;
+    width: auto;
+    display: block;
+}
+
+.logo-link {
+    text-decoration: none; /* Removes browser default link lines */
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none; /* Stays hidden until the mobile media query activates */
 }
 
 nav ul {
@@ -150,4 +171,121 @@ footer {
     background: var(--deep-navy);
     color: var(--coconut-white);
     font-size: 14px;
+}
+
+/* ==========================================
+   📱 MOBILE & TABLET RESPONSIVENESS FIXES
+   ========================================== */
+@media (max-width: 768px) {
+    /* Header & Navigation with Hamburger */
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: row; /* Keeps logo and hamburger side-by-side */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+    }
+
+    /* Style and shape the 3-line hamburger button */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--deep-navy);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Hide the navigation links off-screen by default */
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--coconut-white);
+        border-bottom: 2px solid var(--sand-beige);
+        padding: 20px 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        display: block;
+        font-size: 18px;
+    }
+
+    /* 🟢 When this class is active, the menu slides wide open */
+    .nav-links.active {
+        max-height: 300px; /* Adjust based on menu height */
+    }
+
+    /* Animates the hamburger into an 'X' when clicked */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Hero Display Section */
+    .hero {
+        height: auto;
+        padding: 60px 5%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px; /* Scales down elegantly for phone displays */
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+        width: 100%; /* Makes buttons full-width and thumb-friendly */
+        text-align: center;
+        margin-right: 0;
+    }
+
+    /* Features Grid Block */
+    .features {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .feature-card {
+        width: 100%; /* Stacks cards into a beautiful single column */
+        margin-bottom: 10px;
+    }
+    
+    /* Global Overlays & Grids Safeguard */
+    .room-grid, .rental-grid {
+        grid-template-columns: 1fr !important; /* Forces single-column display on small viewports */
+    }
 }
