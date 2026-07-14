@@ -24,6 +24,9 @@
             overflow: hidden;
             box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);
             border: 1px solid var(--sand-beige);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .room-placeholder {
             height: 240px;
@@ -36,12 +39,24 @@
         }
         .room-info {
             padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .room-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             margin-bottom: 10px;
             color: var(--deep-navy);
+        }
+        .amenity-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 25px 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
         }
         .calendar-section {
             background-color: #F9F6EE;
@@ -57,6 +72,19 @@
             overflow: hidden;
             background: white;
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        }
+        /* Mobile responsive wrapper for Google Calendar */
+        .responsive-cal-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%; /* Forces clean 4:3 desktop aspect ratio */
+            overflow: hidden;
+        }
+        @media (max-width: 768px) {
+            .responsive-cal-wrapper {
+                padding-bottom: 120%; /* Taller ratio for better scrolling layout on small screens */
+            }
         }
     </style>
 </head>
@@ -88,31 +116,51 @@
         <div class="room-grid">
             <!-- Room 1 -->
             <div class="room-card">
-                <div class="room-placeholder">
-                    <span>📷 Room Photos Coming Soon</span>
+                <div>
+                    <div class="room-placeholder">
+                        <span>📷 Room Photos Coming Soon</span>
+                    </div>
+                    <div class="room-info">
+                        <h3>Standard Budget Room</h3>
+                        <p style="font-size: 14px; color: #555;">Perfect for solo backpackers and couples looking for an authentic, affordable hostel atmosphere close to the beaches.</p>
+                        <ul class="amenity-list">
+                            <li>🛏️ Double / Semi-Double Bed (48" × 75")</li>
+                            <li>📶 Free High-Speed Wi-Fi</li>
+                            <li>🌀 Cooling Wall Fan</li>
+                            <li>🚿 Shared Bathroom Facilities</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="room-info">
-                    <h3>Standard Budget Room</h3>
-                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Perfect for solo backpackers and couples looking for an authentic, affordable hostel atmosphere close to the beaches.</p>
-                    <a href="contact.html" class="btn btn-coral" style="display: block;">Check Availability</a>
+                <div style="padding: 0 25px 25px 25px;">
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Check Availability</a>
                 </div>
             </div>
 
             <!-- Room 2 -->
             <div class="room-card">
-                <div class="room-placeholder">
-                    <span>📷 Room Photos Coming Soon</span>
+                <div>
+                    <div class="room-placeholder">
+                        <span>📷 Room Photos Coming Soon</span>
+                    </div>
+                    <div class="room-info">
+                        <h3>Deluxe Aircon Room</h3>
+                        <p style="font-size: 14px; color: #555;">Enjoy crisp air conditioning, extra privacy, and premium linens after a full day of island hopping.</p>
+                        <ul class="amenity-list">
+                            <li>🛏️ Full Double Bed (54" × 75")</li>
+                            <li>❄️ Crisp Air Conditioning</li>
+                            <li>📶 Free High-Speed Wi-Fi</li>
+                            <li>🚿 Private En-Suite Bathroom</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="room-info">
-                    <h3>Deluxe Aircon Room</h3>
-                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Enjoy crisp air conditioning, extra privacy, and premium linens after a full day of island hopping.</p>
-                    <a href="contact.html" class="btn btn-coral" style="display: block;">Check Availability</a>
+                <div style="padding: 0 25px 25px 25px;">
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Check Availability</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Google Calendar Live Sync Placeholder -->
+    <!-- Google Calendar Live Sync -->
     <section class="calendar-section">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 32px;">Live Booking Calendar</h2>
         <p style="max-width: 600px; margin: 10px auto 0 auto; font-size: 15px; color: #555;">
@@ -120,8 +168,14 @@
         </p>
         
         <div class="calendar-container">
-            <!-- This is a live interactive placeholder calendar showing Philippine holidays. You will swap this with your real Google Calendar link later! -->
-            <iframe src="https://calendar.google.com/calendar/embed?src=en.philippines%23holiday%40group.v.calendar.google.com&ctz=Asia%2FManila" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+            <!-- Responsive Wrapper targeting your live resort calendar stream -->
+            <div class="responsive-cal-wrapper">
+                <iframe src="https://calendar.google.com/calendar/embed?src=panglaoroomrentalph%40gmail.com&ctz=Asia%2FManila" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                        frameborder="0" 
+                        scrolling="no">
+                </iframe>
+            </div>
         </div>
     </section>
 

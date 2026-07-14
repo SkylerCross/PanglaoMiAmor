@@ -131,30 +131,40 @@
             <!-- Right Column: Structural Inquiry Form (Powered by Web3Forms & Google Sheets) -->
             <div class="booking-form">
                 <form id="contactForm">
-                    <!-- Web3Forms Access Key Hidden Input -->
+                    <!-- Web3Forms Config Settings (Hidden from guests, styles your emails!) -->
                     <input type="hidden" name="access_key" value="68d96adb-1fb2-49eb-83f7-a66aa6124943">
+
+                    <!-- 1. Sets a beautiful, branded subject line in your inbox -->
+                    <input type="hidden" name="subject" value="🌴 New Inquiry - Panglao Mi Amor">
+
+                    <!-- 2. Sets the Display Name in your inbox so it doesn't look like an automated bot -->
+                    <input type="hidden" name="from_name" value="Panglao Mi Amor Website Backend">
+
+                    <!-- 3. Smart Reply: Hitting "Reply" in your email app now replies directly to the guest! -->
+                    <input type="hidden" name="replyto" value="%Guest Email%">
 
                     <!-- Form Fields -->
                     <div class="form-group">
                         <label for="name">Your Full Name</label>
-                        <input type="text" id="name" name="Guest Name" required placeholder="John Doe">
+                        <input type="text" id="name" name="👤 Guest Name" required placeholder="John Doe">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="Guest Email" required placeholder="john@example.com">
+                        <input type="email" id="email" name="✉️ Guest Email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
                         <label for="service">What are you booking?</label>
-                        <select id="service" name="Inquiry Type">
-                            <option value="room">Room Rental Only</option>
-                            <option value="scooter">Motorbike Rental Only</option>
-                            <option value="tour">Island Tour Package</option>
-                            <option value="all">The Whole Package (Room + Bike + Tour)</option>
+                        <select id="service" name="🛎️ Inquiry Type">
+                            <option value="Room Rental Only">Room Rental Only</option>
+                            <option value="Motorbike Rental Only">Motorbike Rental Only</option>
+                            <option value="Island Tour Package">Island Tour Package</option>
+                            <option value="The Whole Package (Room + Bike + Tour)">The Whole Package (Room + Bike +
+                                Tour)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Dates & Special Requests</label>
-                        <textarea id="message" name="Guest Message" rows="4"
+                        <textarea id="message" name="💬 Guest Message" rows="4"
                             placeholder="Let us know your target dates, arrival time, or scooter preference..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-coral" style="width: 100%; border: none; cursor: pointer;">Send
