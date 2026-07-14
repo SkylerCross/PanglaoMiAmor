@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scooter & Motorbike Rentals - Panglao Mi Amor</title>
+    <title>Vehicle Rentals - Panglao Mi Amor</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .rental-section {
+        .rentals-section {
             padding: 60px 5%;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--deep-navy);
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid var(--sand-beige);
+            padding-bottom: 10px;
         }
         .rental-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
         .rental-card {
             background: var(--coconut-white);
@@ -24,6 +31,9 @@
             overflow: hidden;
             box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);
             border: 1px solid var(--sand-beige);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .rental-placeholder {
             height: 220px;
@@ -36,21 +46,37 @@
         }
         .rental-info {
             padding: 25px;
+            flex-grow: 1;
         }
         .rental-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            color: var(--deep-navy);
         }
-        .badge {
+        .rental-tag {
             display: inline-block;
-            background: var(--sand-beige);
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 600;
+            text-transform: uppercase;
+            color: #ff6f61;
             margin-bottom: 10px;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+        }
+        .specs-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .policy-panel {
+            margin-top: 60px;
+            background: #F9F6EE;
+            border-radius: 12px;
+            padding: 40px 30px;
+            border: 1px solid var(--sand-beige);
         }
     </style>
 </head>
@@ -67,43 +93,140 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rooms.html">Rooms</a></li>
-                <li><a href="rentals.html" class="active">Motorbike Rental</a></li>
+                <li><a href="rentals.html" class="active">Vehicle Rental</a></li>
                 <li><a href="tours.html">Island Tours</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Rentals Section -->
-    <main class="rental-section">
-        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Explore Panglao On Two Wheels</h2>
-        <p style="text-align: center; color: var(--tropical-green); font-weight: 500;">Affordable, well-maintained scooter rentals for ultimate island freedom</p>
+    <!-- Main Rental Content -->
+    <main class="rentals-section">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Explore Panglao Your Way</h2>
+        <p style="text-align: center; color: var(--ocean-blue); font-weight: 500;">From nimble scooters to spacious group vehicles, find your perfect island ride</p>
 
+        <!-- CATEGORY 1: SCOOTERS -->
+        <h3 class="section-title">🛵 Motorbike & Scooter Rentals</h3>
         <div class="rental-grid">
-            <!-- Scooter 1 -->
+            <!-- Honda Click -->
             <div class="rental-card">
-                <div class="rental-placeholder">
-                    <span>🛵 Scooter Photos Coming Soon</span>
+                <div>
+                    <div class="rental-placeholder">
+                        <span>📷 Vehicle Photo Coming Soon</span>
+                    </div>
+                    <div class="rental-info">
+                        <span class="rental-tag">Fuel Efficient Favorite</span>
+                        <h3>Honda Click 125i V1</h3>
+                        <p style="font-size: 14px; color: #555; margin: 0;">The quintessential island scooter. Lightweight, completely automatic, and perfect for effortless solo trips or couples zipping around Panglao.</p>
+                        <ul class="specs-list">
+                            <li>⚙️ 125cc Fully Automatic Engine</li>
+                            <li>🪖 Includes 2 Clean Safety Helmets</li>
+                            <li>⛽ Excellent Fuel Economy</li>
+                            <li>🎒 Convenient Under-Seat Storage</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="rental-info">
-                    <span class="badge" style="color: var(--ocean-blue);">POPULAR CHOICE</span>
-                    <h3>125cc Automatic Scooter</h3>
-                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Incredibly easy to ride, lightweight, and fuel-efficient. Perfect for navigating the beach routes around Panglao and Alona Beach.</p>
-                    <a href="contact.html" class="btn btn-blue" style="display: block;">Reserve This Scooter</a>
+                <div style="padding: 0 25px 25px 25px;">
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
                 </div>
             </div>
 
-            <!-- Scooter 2 -->
+            <!-- Yamaha Aerox -->
             <div class="rental-card">
-                <div class="rental-placeholder">
-                    <span>🏍️ Motorbike Photos Coming Soon</span>
+                <div>
+                    <div class="rental-placeholder">
+                        <span>📷 Vehicle Photo Coming Soon</span>
+                    </div>
+                    <div class="rental-info">
+                        <span class="rental-tag">Sports & Power Tier</span>
+                        <h3>Yamaha Mio Aerox 155</h3>
+                        <p style="font-size: 14px; color: #555; margin: 0;">Boasting extra torque and a wider wheel footprint. Exceptional performance and maximum stability for day trips over to the Bohol mainland.</p>
+                        <ul class="specs-list">
+                            <li>⚙️ 155cc High-Performance Automatic</li>
+                            <li>🪖 Includes 2 Clean Safety Helmets</li>
+                            <li>📱 Sturdy Frame & Superior Suspension</li>
+                            <li>🧳 Spacious Under-Seat Storage</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="rental-info">
-                    <span class="badge" style="color: var(--tropical-green);">EXTRA POWER</span>
-                    <h3>150cc Touring Motorbike</h3>
-                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Extra power and comfort for long-distance cruising. Ideal if you plan to drive up to the Chocolate Hills or explore the Bohol mainland loop.</p>
-                    <a href="contact.html" class="btn btn-blue" style="display: block;">Reserve This Bike</a>
+                <div style="padding: 0 25px 25px 25px;">
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
                 </div>
+            </div>
+        </div>
+
+        <!-- CATEGORY 2: CARS -->
+        <h3 class="section-title">🚗 Car & Multi-Passenger Rentals</h3>
+        <div class="rental-grid">
+            <!-- Ford Escape -->
+            <div class="rental-card">
+                <div>
+                    <div class="rental-placeholder">
+                        <span>📷 Vehicle Photo Coming Soon</span>
+                    </div>
+                    <div class="rental-info">
+                        <span class="rental-tag">Comfort SUV Tier</span>
+                        <h3>Ford Escape</h3>
+                        <p style="font-size: 14px; color: #555; margin: 0;">Spacious and air-conditioned five-seater SUV. The perfect choice for families or small groups carrying heavy luggage and beach gear.</p>
+                        <ul class="specs-list">
+                            <li>❄️ Powerful Cabin Air Conditioning</li>
+                            <li>👥 Comfortably Seats Up to 5 Passengers</li>
+                            <li>🧳 Generous Rear Trunk Space</li>
+                            <li>🛡️ Premium Safety & Driving Framework</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="padding: 0 25px 25px 25px;">
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
+                </div>
+            </div>
+
+            <!-- Suzuki Multicab -->
+            <div class="rental-card">
+                <div>
+                    <div class="rental-placeholder">
+                        <span>📷 Vehicle Photo Coming Soon</span>
+                    </div>
+                    <div class="rental-info">
+                        <span class="rental-tag">Island Utility Classic</span>
+                        <h3>Suzuki Multicab</h3>
+                        <p style="font-size: 14px; color: #555; margin: 0;">The iconic choice for true utility or group excursions. A reliable manual drive that handles equipment, bags, and island routes like a breeze.</p>
+                        <ul class="specs-list">
+                            <li>⚙️ Pure Manual Transmission</li>
+                            <li>🌴 Open or Configured Utility Loading Layout</li>
+                            <li>📦 Ideal for Massive Gear or Group Adventures</li>
+                            <li>🛠️ Robust Mechanical Dependability</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="padding: 0 25px 25px 25px;">
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rental Requirements & Policies -->
+        <div class="policy-panel">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                
+                <!-- Requirements -->
+                <div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">📋 Rental Requirements</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #555; line-height: 1.8;">
+                        <li>🪪 **Valid Driver's License** (Matching vehicle class requirements)</li>
+                        <li>🛂 **Passport or Valid Government ID** copy for security profiling</li>
+                        <li>💵 **Refundable Cash Deposit** required upon vehicle turnover</li>
+                    </ul>
+                </div>
+
+                <!-- Rental Inclusions -->
+                <div>
+                    <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">✨ What's Included</h4>
+                    <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0;">
+                        Every rental vehicle undergoes safety inspections prior to hand-off. Two-wheel solutions include protective helmets, and all transactions route directly through our frontend capture dashboard for simple administration.
+                    </p>
+                </div>
+
             </div>
         </div>
     </main>

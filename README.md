@@ -38,3 +38,25 @@ function doPost(e) {
     return ContentService.createTextOutput(JSON.stringify({"result":"error", "error": error.toString()})).setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+---
+
+## 🛏️ Accommodations & Live Calendar Sync (Card 2)
+The rooms inventory management tier matches local parameters and coordinates real-time availability tracking directly on `rooms.html`.
+
+1. **Localized Inventory Specs:** Room cards feature identical air-conditioned layouts with flexible capacity setups (1, 2, or 3 bed configurations). The primary differentiation is the in-room sink utility included in the upgraded tier.
+2. **Community Perks & Logistics:** Extended documentation for common facilities including open-air rooftop laundry/hang-dry deck parameters, and neighborhood accessibility metrics (under 10-minute walking thresholds to local plaza/beaches; 5-minute transit window to regional shopping hubs via local cab providers or private motorbike hire).
+3. **Live Calendar Integration:** Direct read-only Google Calendar iframe integration (`panglaoroomrentalph@gmail.com`) embedded inside a CSS aspect-ratio responsive container. This layout dynamically stretches to prevent visual breakages or overlapping on mobile devices while keeping client personal data secure.
+
+---
+
+## 🛵 Motorbike & Vehicle Rentals (Card 3)
+The vehicle rental system on `rentals.html` segments the hostel's fleet into distinct transportation tiers to accommodate both independent explorers and groups.
+
+1. **Two-Wheel Fleet Specifications:** Displays exact model configurations for targeted scooter classes:
+   * **Honda Click 125i V1:** Optimized for fuel efficiency and light, automatic urban transit.
+   * **Yamaha Mio Aerox 155:** High-performance automatic tier for enhanced power and long-distance stability.
+2. **Four-Wheel Fleet Specifications:** Showcases multi-passenger transit alternatives:
+   * **Ford Escape:** Premium 5-seater SUV class built for luggage management and air-conditioned group transit.
+   * **Suzuki Multicab:** Robust manual transmission utility platform built for high-capacity gear and group excursions.
+3. **Rental Safety & Policy Guardrails:** Integrates standardized documentation tracking for verification thresholds (license verification, ID profiling, and security deposit workflows) with conversion routing driving back to the core inquiry engine.

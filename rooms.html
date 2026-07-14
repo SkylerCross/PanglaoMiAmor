@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooms & Availability - Panglao Mi Amor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .room-section {
@@ -12,12 +15,14 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .room-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
+
         .room-card {
             background: var(--coconut-white);
             border-radius: 12px;
@@ -28,6 +33,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
         .room-placeholder {
             height: 240px;
             background-color: var(--sand-beige);
@@ -37,6 +43,7 @@
             color: var(--deep-navy);
             font-weight: 500;
         }
+
         .room-info {
             padding: 25px;
             flex-grow: 1;
@@ -44,12 +51,14 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
         .room-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             margin-bottom: 10px;
             color: var(--deep-navy);
         }
+
         .amenity-list {
             list-style: none;
             padding: 0;
@@ -58,12 +67,14 @@
             color: #555;
             line-height: 1.8;
         }
+
         .calendar-section {
             background-color: #F9F6EE;
             padding: 60px 5%;
             text-align: center;
             border-top: 2px solid var(--sand-beige);
         }
+
         .calendar-container {
             max-width: 900px;
             margin: 40px auto 0 auto;
@@ -71,23 +82,28 @@
             border-radius: 12px;
             overflow: hidden;
             background: white;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
         }
+
         /* Mobile responsive wrapper for Google Calendar */
         .responsive-cal-wrapper {
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 75%; /* Forces clean 4:3 desktop aspect ratio */
+            padding-bottom: 75%;
+            /* Forces clean 4:3 desktop aspect ratio */
             overflow: hidden;
         }
+
         @media (max-width: 768px) {
             .responsive-cal-wrapper {
-                padding-bottom: 120%; /* Taller ratio for better scrolling layout on small screens */
+                padding-bottom: 120%;
+                /* Taller ratio for better scrolling layout on small screens */
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header Navigation -->
@@ -101,7 +117,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="rooms.html" class="active">Rooms</a></li>
-                <li><a href="rentals.html">Motorbike Rental</a></li>
+                <li><a href="rentals.html">Vehicle Rental</a></li>
                 <li><a href="tours.html">Island Tours</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -111,22 +127,23 @@
     <!-- Rooms List -->
     <main class="room-section">
         <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Our Accommodations</h2>
-        <p style="text-align: center; color: var(--ocean-blue); font-weight: 500;">Cozy spaces designed for your island stay</p>
+        <p style="text-align: center; color: var(--ocean-blue); font-weight: 500;">Cozy spaces designed for your island
+            stay</p>
 
         <div class="room-grid">
-            <!-- Room 1 -->
+            <!-- Room 1: Standard -->
             <div class="room-card">
                 <div>
                     <div class="room-placeholder">
                         <span>📷 Room Photos Coming Soon</span>
                     </div>
                     <div class="room-info">
-                        <h3>Standard Budget Room</h3>
-                        <p style="font-size: 14px; color: #555;">Perfect for solo backpackers and couples looking for an authentic, affordable hostel atmosphere close to the beaches.</p>
+                        <h3>Standard Room</h3>
+                        <p style="font-size: 14px; color: #555;">Comfortable, fully air-conditioned hostel room featuring flexible sleeping setups to match your group size.</p>
                         <ul class="amenity-list">
-                            <li>🛏️ Double / Semi-Double Bed (48" × 75")</li>
+                            <li>❄️ Crisp Air Conditioning</li>
+                            <li>🛏️ Flexible Bed Layouts (1, 2, or 3 Beds)</li>
                             <li>📶 Free High-Speed Wi-Fi</li>
-                            <li>🌀 Cooling Wall Fan</li>
                             <li>🚿 Shared Bathroom Facilities</li>
                         </ul>
                     </div>
@@ -136,20 +153,21 @@
                 </div>
             </div>
 
-            <!-- Room 2 -->
+            <!-- Room 2: Standard with Sink -->
             <div class="room-card">
                 <div>
                     <div class="room-placeholder">
                         <span>📷 Room Photos Coming Soon</span>
                     </div>
                     <div class="room-info">
-                        <h3>Deluxe Aircon Room</h3>
-                        <p style="font-size: 14px; color: #555;">Enjoy crisp air conditioning, extra privacy, and premium linens after a full day of island hopping.</p>
+                        <h3>Standard Room (with Sink)</h3>
+                        <p style="font-size: 14px; color: #555;">Comfortable, fully air-conditioned hostel room featuring flexible sleeping setups with the added convenience of an in-room sink.</p>
                         <ul class="amenity-list">
-                            <li>🛏️ Full Double Bed (54" × 75")</li>
+                            <li>🚰 In-Room Sink & Vanity</li>
                             <li>❄️ Crisp Air Conditioning</li>
+                            <li>🛏️ Flexible Bed Layouts (1, 2, or 3 Beds)</li>
                             <li>📶 Free High-Speed Wi-Fi</li>
-                            <li>🚿 Private En-Suite Bathroom</li>
+                            <li>🚿 Shared Bathroom Facilities</li>
                         </ul>
                     </div>
                 </div>
@@ -160,20 +178,45 @@
         </div>
     </main>
 
+    <!-- Hostel Perks & Location Section -->
+    <div style="margin-top: 60px; background: var(--coconut-white); border-radius: 12px; padding: 40px 30px; border: 1px solid var(--sand-beige); box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+            
+            <!-- Rooftop Perks -->
+            <div>
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">🧺 Guest Amenities</h4>
+                <p style="font-size: 14px; color: #555; line-height: 1.6;">
+                    All staying guests enjoy access to our open rooftop area. It features a designated space to wash your clothes and a spacious open-air deck to hang dry your laundry in the island breeze.
+                </p>
+            </div>
+
+            <!-- Location & Convenience -->
+            <div>
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">📍 Around the Neighborhood</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #555; line-height: 1.8;">
+                    <li>🛍️ **Town Plaza:** Less than a 10-minute walk away</li>
+                    <li>🏖️ **The Beach:** Less than a 10-minute walk away</li>
+                    <li>🏬 **Shopping Center:** A 5-minute drive (easily accessible by renting one of our motorbikes or calling a local Grab/cab service)</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Google Calendar Live Sync -->
     <section class="calendar-section">
         <h2 style="font-family: 'Playfair Display', serif; font-size: 32px;">Live Booking Calendar</h2>
         <p style="max-width: 600px; margin: 10px auto 0 auto; font-size: 15px; color: #555;">
             See our open slots in real-time. Check the calendar dates below before sending your reservation inquiry.
         </p>
-        
+
         <div class="calendar-container">
             <!-- Responsive Wrapper targeting your live resort calendar stream -->
             <div class="responsive-cal-wrapper">
-                <iframe src="https://calendar.google.com/calendar/embed?src=panglaoroomrentalph%40gmail.com&ctz=Asia%2FManila" 
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-                        frameborder="0" 
-                        scrolling="no">
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?src=panglaoroomrentalph%40gmail.com&ctz=Asia%2FManila"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" frameborder="0"
+                    scrolling="no">
                 </iframe>
             </div>
         </div>
@@ -184,4 +227,5 @@
     </footer>
 
 </body>
+
 </html>
