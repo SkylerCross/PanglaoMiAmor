@@ -149,7 +149,7 @@ ul.nav-links li a.active,
     Hero Display & Layout Sections
    ========================================== */
 .hero {
-    background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('hero-bg.webp') no-repeat !important;
+    background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('images/hero-bg.webp') no-repeat !important;
     
     /* THE GOLDEN RATIO: Balances both the top palm leaves and the bottom sand layout */
     background-position: center 65% !important; 

@@ -83,3 +83,5 @@ Optimized the global platform structure to ensure fluid responsiveness for trave
 * **Integrated Universal Branding (Favicon):** Deployed a custom structured `favicon.ico` configuration embedded across all subpage header components for an enhanced browser tab presence.
 * **Custom 'Lost in Paradise' 404 Error Routing:** Engineered a themed `404.html` landing page utilizing full-bleed shipwreck drone photography combined with a glassmorphic blurred card layout to maintain branding consistency during broken link events.
 * **Enhanced Logo Navigation UX:** Wrapped all instance wrappers of the brand logo in anchor tags linking back to the homepage (`index.html`), aligning with modern user-experience intuition.
+
+**Repository Architecture Cleanup:** Restructured the project directory by migrating all loose media assets into a dedicated `/images` directory, maintaining strict top-level root organization for core HTML/CSS files to comply with web server hosting architecture.
