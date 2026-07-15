@@ -244,13 +244,14 @@
     <footer>
         <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
     </footer>
+    
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navigation = document.querySelector('nav');
+            const menuToggle = document.getElementById('hamburger-btn');
+            const navigation = document.getElementById('nav-menu');
             const header = document.querySelector('header');
 
-            // 1. Mobile Menu Toggle
+            // 1. Mobile Menu Toggle using your exact HTML IDs
             if (menuToggle && navigation) {
                 menuToggle.addEventListener('click', () => {
                     menuToggle.classList.toggle('active');
@@ -259,9 +260,8 @@
             }
 
             // 2. Automated Active Page Highlight Tracker
-            // Looks at the URL bar and matches it with your navigation anchor tags
             const currentUrl = window.location.pathname.split("/").pop() || "index.html";
-            const navLinks = document.querySelectorAll("nav a, .nav-links a");
+            const navLinks = document.querySelectorAll("#nav-menu a");
 
             navLinks.forEach(link => {
                 const linkPage = link.getAttribute("href");
@@ -272,7 +272,7 @@
                 }
             });
 
-            // 3. Header Scroll Behavior Collapse
+            // 3. Header Scroll Collapse
             window.addEventListener('scroll', () => {
                 if (header) {
                     if (window.scrollY > 50) {

@@ -19,40 +19,45 @@ body {
     color: var(--deep-navy);
     background-color: var(--coconut-white);
     line-height: 1.6;
-    padding-top: 85px; /* Keeps the hero image perfectly aligned under the fixed header */
+    padding-top: 85px;
+    /* Keeps the hero image perfectly aligned under the fixed header */
 }
 
 /* ==========================================
     Header Layout & Theme Integration
    ========================================== */
-header, 
+header,
 .header-container,
 .nav-container {
     background-color: var(--coconut-white) !important;
-    padding: 12px 6% !important; 
+    padding: 12px 6% !important;
     display: flex !important;
     flex-direction: row !important;
-    justify-content: space-between !important; 
-    align-items: center !important; 
+    justify-content: space-between !important;
+    align-items: center !important;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    z-index: 1000 !important; 
-    
+    z-index: 1000 !important;
+
     /* Clean thematic divider border */
-    border-bottom: 3px solid var(--sand-beige) !important; 
+    border-bottom: 3px solid var(--sand-beige) !important;
     box-shadow: none !important;
     outline: none !important;
 }
 
 /* Explicitly strip default border/shadow lines from nested structural elements */
-header *, .header-container *, .nav-container * {
+header *,
+.header-container *,
+.nav-container * {
     box-shadow: none !important;
     border-bottom: none !important;
 }
 
-.logo-link, .logo, .logo-container {
+.logo-link,
+.logo,
+.logo-container {
     text-decoration: none !important;
     display: inline-block !important;
     border: none !important;
@@ -62,7 +67,7 @@ header *, .header-container *, .nav-container * {
 .logo-container img,
 header img,
 .header-container img {
-    height: 55px !important; 
+    height: 55px !important;
     width: auto !important;
     display: block !important;
     transition: height 0.3s ease !important;
@@ -71,11 +76,14 @@ header img,
 /* ==========================================
     Navigation Spacing & Alignment Fixes
    ========================================== */
-nav, .nav-links-wrapper, .nav-links {
+nav,
+.nav-links-wrapper,
+.nav-links {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 20px !important; /* Perfect grouping matching the original scale */
+    gap: 20px !important;
+    /* Perfect grouping matching the original scale */
     position: relative !important;
     background: transparent !important;
     margin: 0 !important;
@@ -83,7 +91,8 @@ nav, .nav-links-wrapper, .nav-links {
     border: none !important;
 }
 
-nav ul, ul.nav-links {
+nav ul,
+ul.nav-links {
     display: flex !important;
     flex-direction: row !important;
     gap: 20px !important;
@@ -91,21 +100,22 @@ nav ul, ul.nav-links {
     border: none !important;
 }
 
-nav ul li, ul.nav-links li {
+nav ul li,
+ul.nav-links li {
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
 }
 
 /* Link Typography & Theme States */
-nav a, 
-nav ul li a, 
+nav a,
+nav ul li a,
 ul.nav-links li a,
 .nav-links a {
     text-decoration: none !important;
-    color: var(--deep-navy) !important; 
+    color: var(--deep-navy) !important;
     font-weight: 500 !important;
-    font-size: 15px !important; 
+    font-size: 15px !important;
     letter-spacing: 0.3px !important;
     transition: color 0.2s ease-in-out !important;
     display: inline-block !important;
@@ -117,7 +127,7 @@ ul.nav-links li a,
 nav a:hover,
 nav ul li a:hover,
 .nav-links a:hover {
-    color: var(--ocean-blue) !important; 
+    color: var(--ocean-blue) !important;
 }
 
 /* Thematic Active Page States (Requires class="active" on the HTML element) */
@@ -127,7 +137,8 @@ ul.nav-links li a.active,
 .nav-links a.active,
 .active {
     color: var(--ocean-blue) !important;
-    font-weight: 600 !important; /* Optional slight weight increase to stand out */
+    font-weight: 600 !important;
+    /* Optional slight weight increase to stand out */
 }
 
 .menu-toggle {
@@ -138,16 +149,17 @@ ul.nav-links li a.active,
     Hero Display & Layout Sections
    ========================================== */
 .hero {
-    background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('hero-bg.jpg') no-repeat center center/cover !important;
-    height: 65vh;
+    background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('hero-bg.jpg') no-repeat !important;
+    background-position: center 15% !important; 
+    background-size: cover !important;
+    
+    /* THE FIX: Remove fixed vh and let content + padding dictate a stable height */
+    min-height: 450px; 
     display: flex;
     align-items: center;
-    padding: 0 5%;
+    padding: 80px 5% !important; /* Generous vertical padding creates the height naturally */
     color: #FFFFFF;
-    
-    /* THE FIX: Pulls the section up 4px to hide the image's horizon edge behind the header */
     margin-top: -4px !important; 
-    padding-top: 4px !important; /* Keeps internal content spacing perfectly balanced */
 }
 
 .hero-content h2 {
@@ -206,7 +218,7 @@ ul.nav-links li a.active,
     border-radius: 10px;
     width: 33%;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 footer {
@@ -218,23 +230,40 @@ footer {
 }
 
 /* ==========================================
-    📱 MOBILE RESPONSIVENESS CAPTURING
+    📱 UNIVERSAL MOBILE RESPONSIVENESS FIX
    ========================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+
+    html,
     body {
-        padding-top: 75px;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        /* Disables side-to-side page shaking */
     }
 
-    header, .header-container {
+    body {
+        padding-top: 75px !important;
+    }
+
+    header,
+    .header-container {
         padding: 10px 5% !important;
         border-bottom: 2px solid var(--sand-beige) !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
     }
 
-    .logo img, .logo-container img, header img {
-        height: 45px !important; 
+    /* Keep the logo constrained */
+    .logo img {
+        height: 45px !important;
+        width: auto !important;
+        display: block !important;
     }
 
-    .menu-toggle {
+    /* REVEALS HAMBURGER FOR YOUR EXACT HTML CLASS */
+    .hamburger-menu {
         display: flex !important;
         flex-direction: column !important;
         justify-content: space-between !important;
@@ -246,7 +275,7 @@ footer {
         z-index: 1001 !important;
     }
 
-    .menu-toggle span {
+    .hamburger-menu span {
         width: 100% !important;
         height: 3px !important;
         background-color: var(--deep-navy) !important;
@@ -254,55 +283,103 @@ footer {
         transition: all 0.3s ease !important;
     }
 
-    nav, .nav-links-wrapper, .nav-links {
-        display: block !important; 
+    /* Mobile Dropdown Configuration for #nav-menu */
+    #nav-menu.nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0 !important;
         position: absolute !important;
         top: 100% !important;
         left: 0 !important;
         width: 100% !important;
         background-color: var(--coconut-white) !important;
         border-bottom: 3px solid var(--sand-beige) !important;
-        max-height: 0 !important; 
+        max-height: 0 !important;
         overflow: hidden !important;
         transition: max-height 0.3s ease-in-out !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
         z-index: 1000 !important;
-        flex-direction: column !important;
-        gap: 0 !important;
+        padding: 0 !important;
     }
 
-    nav ul, ul.nav-links {
-        flex-direction: column !important; 
-        align-items: center !important;
-        gap: 0 !important; 
+    /* Opens dropdown list when active class is toggled by script */
+    #nav-menu.nav-links.active {
+        max-height: 350px !important;
         padding: 15px 0 !important;
-        width: 100% !important;
     }
 
-    nav ul li, ul.nav-links li {
-        margin: 10px 0 !important;
-        text-align: center !important;
-        width: 100% !important;
-    }
-
-    nav a, .nav-links a {
+    #nav-menu.nav-links a {
         display: block !important;
-        font-size: 17px !important;
-        padding: 6px 0 !important;
         width: 100% !important;
+        text-align: center !important;
+        font-size: 17px !important;
+        padding: 12px 0 !important;
+        border: none !important;
     }
 
-    nav.active, .nav-links-wrapper.active, .nav-links.active {
-        max-height: 350px !important; 
-    }
-
-    .menu-toggle.active span:nth-child(1) {
+    /* Animates Hamburger into 'X' when open */
+    .hamburger-menu.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg) !important;
     }
-    .menu-toggle.active span:nth-child(2) {
+
+    .hamburger-menu.active span:nth-child(2) {
         opacity: 0 !important;
     }
-    .menu-toggle.active span:nth-child(3) {
+
+    .hamburger-menu.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    /* ==========================================
+        Subpage Global Elements Autofit Setup
+       ========================================== */
+    .features,
+    .room-grid,
+    .rental-grid,
+    .tour-grid,
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        /* Converts all rows to vertical layout stacks */
+        gap: 25px !important;
+        padding: 40px 4% !important;
+    }
+
+    .feature-card,
+    .room-card,
+    .rental-card,
+    .tour-card,
+    .booking-form,
+    .contact-info {
+        width: 100% !important;
+        /* Forces items to stay inside mobile layout bounds */
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .feature-card,
+    .room-card,
+    .rental-card,
+    .tour-card,
+    .booking-form,
+    .contact-info {
+        width: 100% !important;
+        /* Forces items to stay inside mobile layout bounds */
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* 🎯 UNIVERSAL MOBILE HERO FIX */
+    .hero {
+        margin-top: -12px !important; 
+        padding-top: 60px !important; /* Adjusted for mobile header spacing */
+        padding-bottom: 60px !important;
+        min-height: 320px !important; /* Guarantees it never squishes too small on tiny phones */
+        background-position: center center !important; /* Anchors it cleanly on all screen aspect ratios */
+    }
+
+    .hero-content h2 {
+        font-size: 32px !important;
     }
 }
