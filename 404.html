@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | Panglao Mi Amor</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        body, html {
+
+        body,
+        html {
             height: 100%;
             font-family: 'Poppins', sans-serif;
             overflow: hidden;
         }
+
         .error-wrapper {
             position: relative;
             height: 100vh;
@@ -29,9 +35,11 @@
             justify-content: center;
             padding: 20px;
         }
+
         /* Glassmorphism card to keep your text readable against the water details */
         .error-card {
-            background: rgba(255, 249, 230, 0.92); /* Cream theme background with light opacity */
+            background: rgba(255, 249, 230, 0.92);
+            /* Cream theme background with light opacity */
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             padding: 40px 30px;
@@ -42,34 +50,41 @@
             box-shadow: 0 10px 30px rgba(23, 63, 95, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
+
         .error-logo {
             max-width: 200px;
             height: auto;
             margin-bottom: 20px;
         }
+
         .error-code {
             font-family: 'Playfair Display', serif;
             font-size: 5rem;
-            color: #173F5F; /* Theme deep blue */
+            color: #173F5F;
+            /* Theme deep blue */
             line-height: 1;
             margin-bottom: 5px;
         }
+
         .error-heading {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             color: #173F5F;
             margin-bottom: 15px;
         }
+
         .error-message {
             font-size: 0.95rem;
             color: #555555;
             line-height: 1.6;
             margin-bottom: 30px;
         }
+
         .error-btn {
             display: inline-block;
             font-weight: 600;
-            background-color: #008CBA; /* Theme blue button */
+            background-color: #008CBA;
+            /* Theme blue button */
             color: #FFFFFF;
             padding: 12px 28px;
             border-radius: 6px;
@@ -77,30 +92,37 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(0, 140, 186, 0.3);
         }
+
         .error-btn:hover {
-            background-color: #FF7A59; /* Accent coral hover */
+            background-color: #FF7A59;
+            /* Accent coral hover */
             box-shadow: 0 4px 12px rgba(255, 122, 89, 0.4);
             transform: translateY(-1px);
         }
     </style>
 </head>
+
 <body>
 
     <div class="error-wrapper">
         <div class="error-card">
             <!-- Verbatim references to your assets -->
-            <img src="logo.webp" alt="Panglao Mi Amor Logo" class="error-logo">
-            
+            <a href="index.html">
+                <img src="logo.webp" alt="Panglao Mi Amor Logo" class="error-logo">
+            </a>
+
             <h1 class="error-code">404</h1>
             <h2 class="error-heading">Lost in Paradise?</h2>
-            
+
             <p class="error-message">
-                It looks like that specific trail led to a hidden shipwreck. Don't worry, we can easily guide you back to the main resort shore.
+                It looks like that specific trail led to a hidden shipwreck. Don't worry, we can easily guide you back
+                to the main resort shore.
             </p>
-            
+
             <a href="index.html" class="error-btn">Return to Shore</a>
         </div>
     </div>
 
 </body>
+
 </html>

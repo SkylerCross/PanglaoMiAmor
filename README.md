@@ -78,3 +78,8 @@ Optimized the global platform structure to ensure fluid responsiveness for trave
 * **Optimized Image Performance:** Converted raw layout images to compressed `.webp` formats to drastically reduce page load speeds and ensure fluid, instantaneous performance on mobile connections.
 * **Integrated Universal Branding (Favicon):** Deployed a custom structured `favicon.ico` configuration embedded across all subpage header components for an enhanced, cohesive browser tab presence.
 * **Custom 'Lost in Paradise' 404 Error Routing:** Engineered a themed `404.html` landing page utilizing full-bleed shipwreck drone photography combined with a glassmorphic blurred user-interface- layout to maintain branding consistency during broken link events.
+
+* **Optimized Image Performance:** Converted raw layout images to compressed `.webp` formats to drastically reduce page load speeds and ensure fluid performance.
+* **Integrated Universal Branding (Favicon):** Deployed a custom structured `favicon.ico` configuration embedded across all subpage header components for an enhanced browser tab presence.
+* **Custom 'Lost in Paradise' 404 Error Routing:** Engineered a themed `404.html` landing page utilizing full-bleed shipwreck drone photography combined with a glassmorphic blurred card layout to maintain branding consistency during broken link events.
+* **Enhanced Logo Navigation UX:** Wrapped all instance wrappers of the brand logo in anchor tags linking back to the homepage (`index.html`), aligning with modern user-experience intuition.

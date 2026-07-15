@@ -230,6 +230,14 @@ footer {
     font-size: 14px;
 }
 
+/* --- GLOBAL LOGO LINK UX POLISH --- */
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
 /* ==========================================
     📱 UNIVERSAL MOBILE RESPONSIVENESS FIX
    ========================================== */
