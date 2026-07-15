@@ -108,20 +108,28 @@
 
     <!-- Header Navigation -->
     <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-link">
-                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img" style="height: 60px; width: auto;">
-            </a>
+        <div class="header-container">
+            <!-- Your Logo wrapper -->
+            <div class="logo">
+                <img src="logo.png" alt="Panglao Mi Amor Logo">
+            </div>
+
+            <!-- The Hamburger Icon -->
+            <div class="hamburger-menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- The actual Navigation Links Container -->
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="rentals.html">Vehicle Rental</a>
+                <a href="tours.html">Island Tours</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="rooms.html" class="active">Rooms</a></li>
-                <li><a href="rentals.html">Vehicle Rental</a></li>
-                <li><a href="tours.html">Island Tours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Rooms List -->
@@ -139,7 +147,8 @@
                     </div>
                     <div class="room-info">
                         <h3>Standard Room</h3>
-                        <p style="font-size: 14px; color: #555;">Comfortable, fully air-conditioned hostel room featuring flexible sleeping setups to match your group size.</p>
+                        <p style="font-size: 14px; color: #555;">Comfortable, fully air-conditioned hostel room
+                            featuring flexible sleeping setups to match your group size.</p>
                         <ul class="amenity-list">
                             <li>❄️ Crisp Air Conditioning</li>
                             <li>🛏️ Flexible Bed Layouts (1, 2, or 3 Beds)</li>
@@ -149,7 +158,8 @@
                     </div>
                 </div>
                 <div style="padding: 0 25px 25px 25px;">
-                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Check Availability</a>
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Check
+                        Availability</a>
                 </div>
             </div>
 
@@ -161,7 +171,8 @@
                     </div>
                     <div class="room-info">
                         <h3>Standard Room (with Sink)</h3>
-                        <p style="font-size: 14px; color: #555;">Comfortable, fully air-conditioned hostel room featuring flexible sleeping setups with the added convenience of an in-room sink.</p>
+                        <p style="font-size: 14px; color: #555;">Comfortable, fully air-conditioned hostel room
+                            featuring flexible sleeping setups with the added convenience of an in-room sink.</p>
                         <ul class="amenity-list">
                             <li>🚰 In-Room Sink & Vanity</li>
                             <li>❄️ Crisp Air Conditioning</li>
@@ -172,31 +183,39 @@
                     </div>
                 </div>
                 <div style="padding: 0 25px 25px 25px;">
-                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Check Availability</a>
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Check
+                        Availability</a>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Hostel Perks & Location Section -->
-    <div style="margin-top: 60px; background: var(--coconut-white); border-radius: 12px; padding: 40px 30px; border: 1px solid var(--sand-beige); box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);">
+    <div
+        style="margin-top: 60px; background: var(--coconut-white); border-radius: 12px; padding: 40px 30px; border: 1px solid var(--sand-beige); box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-            
+
             <!-- Rooftop Perks -->
             <div>
-                <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">🧺 Guest Amenities</h4>
+                <h4
+                    style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">
+                    🧺 Guest Amenities</h4>
                 <p style="font-size: 14px; color: #555; line-height: 1.6;">
-                    All staying guests enjoy access to our open rooftop area. It features a designated space to wash your clothes and a spacious open-air deck to hang dry your laundry in the island breeze.
+                    All staying guests enjoy access to our open rooftop area. It features a designated space to wash
+                    your clothes and a spacious open-air deck to hang dry your laundry in the island breeze.
                 </p>
             </div>
 
             <!-- Location & Convenience -->
             <div>
-                <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">📍 Around the Neighborhood</h4>
+                <h4
+                    style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">
+                    📍 Around the Neighborhood</h4>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #555; line-height: 1.8;">
                     <li>🛍️ **Town Plaza:** Less than a 10-minute walk away</li>
                     <li>🏖️ **The Beach:** Less than a 10-minute walk away</li>
-                    <li>🏬 **Shopping Center:** A 5-minute drive (easily accessible by renting one of our motorbikes or calling a local Grab/cab service)</li>
+                    <li>🏬 **Shopping Center:** A 5-minute drive (easily accessible by renting one of our motorbikes or
+                        calling a local Grab/cab service)</li>
                 </ul>
             </div>
 
@@ -225,17 +244,47 @@
     <footer>
         <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navigation = document.querySelector('nav');
+            const header = document.querySelector('header');
+
+            // 1. Mobile Menu Toggle
+            if (menuToggle && navigation) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navigation.classList.toggle('active');
+                });
+            }
+
+            // 2. Automated Active Page Highlight Tracker
+            // Looks at the URL bar and matches it with your navigation anchor tags
+            const currentUrl = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll("nav a, .nav-links a");
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute("href");
+                if (linkPage === currentUrl) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // 3. Header Scroll Behavior Collapse
+            window.addEventListener('scroll', () => {
+                if (header) {
+                    if (window.scrollY > 50) {
+                        header.classList.add('collapsed');
+                    } else {
+                        header.classList.remove('collapsed');
+                    }
+                }
+            });
+        });
+    </script>
 
 </body>
-
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-</script>
 
 </html>

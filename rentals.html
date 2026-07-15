@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Rentals - Panglao Mi Amor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .rentals-section {
@@ -12,6 +15,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 26px;
@@ -20,11 +24,13 @@
             border-bottom: 2px solid var(--sand-beige);
             padding-bottom: 10px;
         }
+
         .rental-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
+
         .rental-card {
             background: var(--coconut-white);
             border-radius: 12px;
@@ -35,6 +41,7 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
         .rental-placeholder {
             height: 220px;
             background-color: var(--sand-beige);
@@ -44,16 +51,19 @@
             color: var(--deep-navy);
             font-weight: 500;
         }
+
         .rental-info {
             padding: 25px;
             flex-grow: 1;
         }
+
         .rental-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             margin-bottom: 5px;
             color: var(--deep-navy);
         }
+
         .rental-tag {
             display: inline-block;
             font-size: 12px;
@@ -63,6 +73,7 @@
             margin-bottom: 10px;
             letter-spacing: 0.5px;
         }
+
         .specs-list {
             list-style: none;
             padding: 0;
@@ -71,6 +82,7 @@
             color: #555;
             line-height: 1.8;
         }
+
         .policy-panel {
             margin-top: 60px;
             background: #F9F6EE;
@@ -80,30 +92,41 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header Navigation -->
     <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-link">
-                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img" style="height: 60px; width: auto;">
-            </a>
+        <div class="header-container">
+            <!-- Your Logo wrapper -->
+            <div class="logo">
+                <img src="logo.png" alt="Panglao Mi Amor Logo">
+            </div>
+
+            <!-- The Hamburger Icon -->
+            <div class="hamburger-menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- The actual Navigation Links Container -->
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="rentals.html">Vehicle Rental</a>
+                <a href="tours.html">Island Tours</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="rooms.html">Rooms</a></li>
-                <li><a href="rentals.html" class="active">Vehicle Rental</a></li>
-                <li><a href="tours.html">Island Tours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Main Rental Content -->
     <main class="rentals-section">
-        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Explore Panglao Your Way</h2>
-        <p style="text-align: center; color: var(--ocean-blue); font-weight: 500;">From nimble scooters to spacious group vehicles, find your perfect island ride</p>
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Explore Panglao Your
+            Way</h2>
+        <p style="text-align: center; color: var(--ocean-blue); font-weight: 500;">From nimble scooters to spacious
+            group vehicles, find your perfect island ride</p>
 
         <!-- CATEGORY 1: SCOOTERS -->
         <h3 class="section-title">🛵 Motorbike & Scooter Rentals</h3>
@@ -117,7 +140,9 @@
                     <div class="rental-info">
                         <span class="rental-tag">Fuel Efficient Favorite</span>
                         <h3>Honda Click 125i V1</h3>
-                        <p style="font-size: 14px; color: #555; margin: 0;">The quintessential island scooter. Lightweight, completely automatic, and perfect for effortless solo trips or couples zipping around Panglao.</p>
+                        <p style="font-size: 14px; color: #555; margin: 0;">The quintessential island scooter.
+                            Lightweight, completely automatic, and perfect for effortless solo trips or couples zipping
+                            around Panglao.</p>
                         <ul class="specs-list">
                             <li>⚙️ 125cc Fully Automatic Engine</li>
                             <li>🪖 Includes 2 Clean Safety Helmets</li>
@@ -127,7 +152,8 @@
                     </div>
                 </div>
                 <div style="padding: 0 25px 25px 25px;">
-                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for
+                        Rates</a>
                 </div>
             </div>
 
@@ -140,7 +166,9 @@
                     <div class="rental-info">
                         <span class="rental-tag">Sports & Power Tier</span>
                         <h3>Yamaha Mio Aerox 155</h3>
-                        <p style="font-size: 14px; color: #555; margin: 0;">Boasting extra torque and a wider wheel footprint. Exceptional performance and maximum stability for day trips over to the Bohol mainland.</p>
+                        <p style="font-size: 14px; color: #555; margin: 0;">Boasting extra torque and a wider wheel
+                            footprint. Exceptional performance and maximum stability for day trips over to the Bohol
+                            mainland.</p>
                         <ul class="specs-list">
                             <li>⚙️ 155cc High-Performance Automatic</li>
                             <li>🪖 Includes 2 Clean Safety Helmets</li>
@@ -150,7 +178,8 @@
                     </div>
                 </div>
                 <div style="padding: 0 25px 25px 25px;">
-                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for
+                        Rates</a>
                 </div>
             </div>
         </div>
@@ -167,7 +196,9 @@
                     <div class="rental-info">
                         <span class="rental-tag">Comfort SUV Tier</span>
                         <h3>Ford Escape</h3>
-                        <p style="font-size: 14px; color: #555; margin: 0;">Spacious and air-conditioned five-seater SUV. The perfect choice for families or small groups carrying heavy luggage and beach gear.</p>
+                        <p style="font-size: 14px; color: #555; margin: 0;">Spacious and air-conditioned five-seater
+                            SUV. The perfect choice for families or small groups carrying heavy luggage and beach gear.
+                        </p>
                         <ul class="specs-list">
                             <li>❄️ Powerful Cabin Air Conditioning</li>
                             <li>👥 Comfortably Seats Up to 5 Passengers</li>
@@ -177,7 +208,8 @@
                     </div>
                 </div>
                 <div style="padding: 0 25px 25px 25px;">
-                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for
+                        Rates</a>
                 </div>
             </div>
 
@@ -190,7 +222,9 @@
                     <div class="rental-info">
                         <span class="rental-tag">Island Utility Classic</span>
                         <h3>Suzuki Multicab</h3>
-                        <p style="font-size: 14px; color: #555; margin: 0;">The iconic choice for true utility or group excursions. A reliable manual drive that handles equipment, bags, and island routes like a breeze.</p>
+                        <p style="font-size: 14px; color: #555; margin: 0;">The iconic choice for true utility or group
+                            excursions. A reliable manual drive that handles equipment, bags, and island routes like a
+                            breeze.</p>
                         <ul class="specs-list">
                             <li>⚙️ Pure Manual Transmission</li>
                             <li>🌴 Open or Configured Utility Loading Layout</li>
@@ -200,7 +234,8 @@
                     </div>
                 </div>
                 <div style="padding: 0 25px 25px 25px;">
-                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for Rates</a>
+                    <a href="contact.html" class="btn btn-coral" style="display: block; text-align: center;">Inquire for
+                        Rates</a>
                 </div>
             </div>
         </div>
@@ -208,11 +243,14 @@
         <!-- Rental Requirements & Policies -->
         <div class="policy-panel">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-                
+
                 <!-- Requirements -->
                 <div>
-                    <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">📋 Rental Requirements</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #555; line-height: 1.8;">
+                    <h4
+                        style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">
+                        📋 Rental Requirements</h4>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; font-size: 14px; color: #555; line-height: 1.8;">
                         <li>🪪 **Valid Driver's License** (Matching vehicle class requirements)</li>
                         <li>🛂 **Passport or Valid Government ID** copy for security profiling</li>
                         <li>💵 **Refundable Cash Deposit** required upon vehicle turnover</li>
@@ -221,9 +259,13 @@
 
                 <!-- Rental Inclusions -->
                 <div>
-                    <h4 style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">✨ What's Included</h4>
+                    <h4
+                        style="font-family: 'Playfair Display', serif; font-size: 20px; color: var(--deep-navy); margin-bottom: 15px;">
+                        ✨ What's Included</h4>
                     <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0;">
-                        Every rental vehicle undergoes safety inspections prior to hand-off. Two-wheel solutions include protective helmets, and all transactions route directly through our frontend capture dashboard for simple administration.
+                        Every rental vehicle undergoes safety inspections prior to hand-off. Two-wheel solutions include
+                        protective helmets, and all transactions route directly through our frontend capture dashboard
+                        for simple administration.
                     </p>
                 </div>
 
@@ -235,16 +277,47 @@
         <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navigation = document.querySelector('nav');
+            const header = document.querySelector('header');
+
+            // 1. Mobile Menu Toggle
+            if (menuToggle && navigation) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navigation.classList.toggle('active');
+                });
+            }
+
+            // 2. Automated Active Page Highlight Tracker
+            // Looks at the URL bar and matches it with your navigation anchor tags
+            const currentUrl = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll("nav a, .nav-links a");
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute("href");
+                if (linkPage === currentUrl) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // 3. Header Scroll Behavior Collapse
+            window.addEventListener('scroll', () => {
+                if (header) {
+                    if (window.scrollY > 50) {
+                        header.classList.add('collapsed');
+                    } else {
+                        header.classList.remove('collapsed');
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
-
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-</script>
 
 </html>

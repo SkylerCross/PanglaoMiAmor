@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bohol & Panglao Island Tours - Panglao Mi Amor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .tour-section {
@@ -12,12 +15,14 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .tour-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
+
         .tour-card {
             background: var(--coconut-white);
             border-radius: 12px;
@@ -25,6 +30,7 @@
             box-shadow: 0 6px 18px rgba(23, 63, 95, 0.06);
             border: 1px solid var(--sand-beige);
         }
+
         .tour-placeholder {
             height: 220px;
             background-color: var(--sand-beige);
@@ -34,9 +40,11 @@
             color: var(--deep-navy);
             font-weight: 500;
         }
+
         .tour-info {
             padding: 25px;
         }
+
         .tour-info h3 {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
@@ -44,30 +52,41 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header Navigation -->
     <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-link">
-                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img" style="height: 60px; width: auto;">
-            </a>
+        <div class="header-container">
+            <!-- Your Logo wrapper -->
+            <div class="logo">
+                <img src="logo.png" alt="Panglao Mi Amor Logo">
+            </div>
+
+            <!-- The Hamburger Icon -->
+            <div class="hamburger-menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- The actual Navigation Links Container -->
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="rentals.html">Vehicle Rental</a>
+                <a href="tours.html">Island Tours</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="rooms.html">Rooms</a></li>
-                <li><a href="rentals.html">Vehicle Rental</a></li>
-                <li><a href="tours.html" class="active">Island Tours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Tours Section -->
     <main class="tour-section">
-        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Curated Island Experiences</h2>
-        <p style="text-align: center; color: var(--coral); font-weight: 500;">Unforgettable adventures showing you the best spots in Bohol</p>
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 36px;">Curated Island
+            Experiences</h2>
+        <p style="text-align: center; color: var(--coral); font-weight: 500;">Unforgettable adventures showing you the
+            best spots in Bohol</p>
 
         <div class="tour-grid">
             <!-- Tour 1 -->
@@ -77,7 +96,9 @@
                 </div>
                 <div class="tour-info">
                     <h3>Panglao Island Hopping</h3>
-                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Start early with dolphin watching, snorkel among pristine coral sanctuaries and sea turtles at Balicasag Island, and relax on the Virgin Island sandbar.</p>
+                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Start early with dolphin watching,
+                        snorkel among pristine coral sanctuaries and sea turtles at Balicasag Island, and relax on the
+                        Virgin Island sandbar.</p>
                     <a href="contact.html" class="btn btn-coral" style="display: block;">Inquire Tour Slot</a>
                 </div>
             </div>
@@ -89,7 +110,9 @@
                 </div>
                 <div class="tour-info">
                     <h3>Bohol Countryside Tour</h3>
-                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Witness the world-famous Chocolate Hills, meet the tiny Tarsiers in their sanctuary, enjoy a buffet lunch cruising down the Loboc River, and pass the mahogany Man-Made Forest.</p>
+                    <p style="font-size: 14px; margin-bottom: 20px; color: #555;">Witness the world-famous Chocolate
+                        Hills, meet the tiny Tarsiers in their sanctuary, enjoy a buffet lunch cruising down the Loboc
+                        River, and pass the mahogany Man-Made Forest.</p>
                     <a href="contact.html" class="btn btn-coral" style="display: block;">Inquire Tour Slot</a>
                 </div>
             </div>
@@ -100,16 +123,47 @@
         <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navigation = document.querySelector('nav');
+            const header = document.querySelector('header');
+
+            // 1. Mobile Menu Toggle
+            if (menuToggle && navigation) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navigation.classList.toggle('active');
+                });
+            }
+
+            // 2. Automated Active Page Highlight Tracker
+            // Looks at the URL bar and matches it with your navigation anchor tags
+            const currentUrl = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll("nav a, .nav-links a");
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute("href");
+                if (linkPage === currentUrl) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // 3. Header Scroll Behavior Collapse
+            window.addEventListener('scroll', () => {
+                if (header) {
+                    if (window.scrollY > 50) {
+                        header.classList.add('collapsed');
+                    } else {
+                        header.classList.remove('collapsed');
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
-
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-</script>
 
 </html>

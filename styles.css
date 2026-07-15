@@ -1,4 +1,4 @@
-/* Brand Palette Variables from your Kit */
+/* Brand Palette Variables */
 :root {
     --ocean-blue: #008FD5;
     --tropical-green: #2E8B57;
@@ -19,84 +19,135 @@ body {
     color: var(--deep-navy);
     background-color: var(--coconut-white);
     line-height: 1.6;
+    padding-top: 85px; /* Keeps the hero image perfectly aligned under the fixed header */
 }
 
-/* Header UI */
-header {
-    background-color: var(--coconut-white);
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--sand-beige);
+/* ==========================================
+    Header Layout & Theme Integration
+   ========================================== */
+header, 
+.header-container,
+.nav-container {
+    background-color: var(--coconut-white) !important;
+    padding: 12px 6% !important; 
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important; 
+    align-items: center !important; 
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important; 
     
-    /* 📌 This keeps the header floating at the top */
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Keeps it layered above images and text when scrolling */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Adds a subtle shadow so it separates cleanly from the content behind it */
+    /* Clean thematic divider border */
+    border-bottom: 3px solid var(--sand-beige) !important; 
+    box-shadow: none !important;
+    outline: none !important;
 }
 
-.brand-title {
-    font-family: 'Playfair Display', serif;
-    color: var(--ocean-blue);
-    font-size: 28px;
+/* Explicitly strip default border/shadow lines from nested structural elements */
+header *, .header-container *, .nav-container * {
+    box-shadow: none !important;
+    border-bottom: none !important;
 }
 
-.brand-title span {
-    color: var(--tropical-green);
-    font-style: italic;
+.logo-link, .logo, .logo-container {
+    text-decoration: none !important;
+    display: inline-block !important;
+    border: none !important;
 }
 
-.tagline {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--deep-navy);
+.logo img,
+.logo-container img,
+header img,
+.header-container img {
+    height: 55px !important; 
+    width: auto !important;
+    display: block !important;
+    transition: height 0.3s ease !important;
 }
 
-.logo-img {
-    max-height: 60px;
-    width: auto;
-    display: block;
+/* ==========================================
+    Navigation Spacing & Alignment Fixes
+   ========================================== */
+nav, .nav-links-wrapper, .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important; /* Perfect grouping matching the original scale */
+    position: relative !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
 }
 
-.logo-link {
-    text-decoration: none; /* Removes browser default link lines */
-    display: inline-block;
+nav ul, ul.nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    list-style: none !important;
+    border: none !important;
+}
+
+nav ul li, ul.nav-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Link Typography & Theme States */
+nav a, 
+nav ul li a, 
+ul.nav-links li a,
+.nav-links a {
+    text-decoration: none !important;
+    color: var(--deep-navy) !important; 
+    font-weight: 500 !important;
+    font-size: 15px !important; 
+    letter-spacing: 0.3px !important;
+    transition: color 0.2s ease-in-out !important;
+    display: inline-block !important;
+    padding: 4px 0 !important;
+    border: none !important;
+}
+
+/* Interactive Hover States */
+nav a:hover,
+nav ul li a:hover,
+.nav-links a:hover {
+    color: var(--ocean-blue) !important; 
+}
+
+/* Thematic Active Page States (Requires class="active" on the HTML element) */
+nav a.active,
+nav ul li a.active,
+ul.nav-links li a.active,
+.nav-links a.active,
+.active {
+    color: var(--ocean-blue) !important;
+    font-weight: 600 !important; /* Optional slight weight increase to stand out */
 }
 
 .menu-toggle {
-    display: none; /* Stays hidden until the mobile media query activates */
+    display: none !important;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--deep-navy);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover, nav ul li a.active {
-    color: var(--ocean-blue);
-}
-
-/* Hero Display */
+/* ==========================================
+    Hero Display & Layout Sections
+   ========================================== */
 .hero {
-    background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('hero-bg.jpg') no-repeat center center/cover !important;
     height: 65vh;
     display: flex;
     align-items: center;
     padding: 0 5%;
     color: #FFFFFF;
+    
+    /* THE FIX: Pulls the section up 4px to hide the image's horizon edge behind the header */
+    margin-top: -4px !important; 
+    padding-top: 4px !important; /* Keeps internal content spacing perfectly balanced */
 }
 
 .hero-content h2 {
@@ -117,7 +168,6 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 30px;
 }
 
-/* Styled Action Buttons */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -142,7 +192,6 @@ nav ul li a:hover, nav ul li a.active {
     color: var(--coconut-white);
 }
 
-/* Features Block */
 .features {
     display: flex;
     justify-content: space-around;
@@ -160,11 +209,6 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.feature-card h3 {
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 12px;
-}
-
 footer {
     text-align: center;
     padding: 25px;
@@ -174,118 +218,91 @@ footer {
 }
 
 /* ==========================================
-   📱 MOBILE & TABLET RESPONSIVENESS FIXES
+    📱 MOBILE RESPONSIVENESS CAPTURING
    ========================================== */
 @media (max-width: 768px) {
-    /* Header & Navigation with Hamburger */
-    header {
-        position: relative;
-        display: flex;
-        flex-direction: row; /* Keeps logo and hamburger side-by-side */
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 5%;
+    body {
+        padding-top: 75px;
     }
 
-    /* Style and shape the 3-line hamburger button */
+    header, .header-container {
+        padding: 10px 5% !important;
+        border-bottom: 2px solid var(--sand-beige) !important;
+    }
+
+    .logo img, .logo-container img, header img {
+        height: 45px !important; 
+    }
+
     .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 1001;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 28px !important;
+        height: 20px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        z-index: 1001 !important;
     }
 
     .menu-toggle span {
-        width: 100%;
-        height: 3px;
-        background-color: var(--deep-navy);
-        border-radius: 2px;
-        transition: all 0.3s ease;
+        width: 100% !important;
+        height: 3px !important;
+        background-color: var(--deep-navy) !important;
+        border-radius: 2px !important;
+        transition: all 0.3s ease !important;
     }
 
-    /* Hide the navigation links off-screen by default */
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--coconut-white);
-        border-bottom: 2px solid var(--sand-beige);
-        padding: 20px 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    nav, .nav-links-wrapper, .nav-links {
+        display: block !important; 
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background-color: var(--coconut-white) !important;
+        border-bottom: 3px solid var(--sand-beige) !important;
+        max-height: 0 !important; 
+        overflow: hidden !important;
+        transition: max-height 0.3s ease-in-out !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+        z-index: 1000 !important;
+        flex-direction: column !important;
+        gap: 0 !important;
     }
 
-    .nav-links li {
-        margin: 15px 0;
-        text-align: center;
-        width: 100%;
+    nav ul, ul.nav-links {
+        flex-direction: column !important; 
+        align-items: center !important;
+        gap: 0 !important; 
+        padding: 15px 0 !important;
+        width: 100% !important;
     }
 
-    .nav-links li a {
-        display: block;
-        font-size: 18px;
+    nav ul li, ul.nav-links li {
+        margin: 10px 0 !important;
+        text-align: center !important;
+        width: 100% !important;
     }
 
-    /* 🟢 When this class is active, the menu slides wide open */
-    .nav-links.active {
-        max-height: 300px; /* Adjust based on menu height */
+    nav a, .nav-links a {
+        display: block !important;
+        font-size: 17px !important;
+        padding: 6px 0 !important;
+        width: 100% !important;
     }
 
-    /* Animates the hamburger into an 'X' when clicked */
+    nav.active, .nav-links-wrapper.active, .nav-links.active {
+        max-height: 350px !important; 
+    }
+
     .menu-toggle.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg) !important;
     }
     .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
+        opacity: 0 !important;
     }
     .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* Hero Display Section */
-    .hero {
-        height: auto;
-        padding: 60px 5%;
-    }
-
-    .hero-content h2 {
-        font-size: 32px; /* Scales down elegantly for phone displays */
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-
-    .btn {
-        margin-bottom: 10px;
-        width: 100%; /* Makes buttons full-width and thumb-friendly */
-        text-align: center;
-        margin-right: 0;
-    }
-
-    /* Features Grid Block */
-    .features {
-        flex-direction: column;
-        padding: 40px 5%;
-    }
-
-    .feature-card {
-        width: 100%; /* Stacks cards into a beautiful single column */
-        margin-bottom: 10px;
-    }
-    
-    /* Global Overlays & Grids Safeguard */
-    .room-grid, .rental-grid {
-        grid-template-columns: 1fr !important; /* Forces single-column display on small viewports */
+        transform: translateY(-8px) rotate(-45deg) !important;
     }
 }

@@ -16,30 +16,28 @@
 
     <!-- Header Navigation -->
     <header>
-        <div class="logo-container">
-            <a href="index.html" class="logo-link">
-                <!-- 🌴 Swapped the text spans for your actual logo image -->
-                <img src="logo.png" alt="Panglao Mi Amor Logo" class="logo-img">
-            </a>
+        <div class="header-container">
+            <!-- Your Logo wrapper -->
+            <div class="logo">
+                <img src="logo.png" alt="Panglao Mi Amor Logo">
+            </div>
+
+            <!-- The Hamburger Icon -->
+            <div class="hamburger-menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- The actual Navigation Links Container -->
+            <nav class="nav-links" id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="rentals.html">Vehicle Rental</a>
+                <a href="tours.html">Island Tours</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
-
-        <!-- ☰ The Hamburger Button -->
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav>
-            <!-- 🔗 Added class "nav-links" here -->
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="rooms.html">Rooms</a></li>
-                <li><a href="rentals.html">Vehicle Rental</a></li>
-                <li><a href="tours.html">Island Tours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -62,7 +60,7 @@
             <p>Your relaxing oasis waiting for you after a long day under the sun.</p>
         </div>
         <div class="feature-card">
-            <h3>🛵 Scooter Rentals</h3>
+            <h3>🛵🚙 Vehicle Rentals</h3>
             <p>Explore Panglao at your own pace with our well-maintained motorbikes.</p>
         </div>
         <div class="feature-card">
@@ -75,16 +73,47 @@
         <p>&copy; 2026 Panglao Mi Amor Room Rental. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navigation = document.querySelector('nav');
+            const header = document.querySelector('header');
+
+            // 1. Mobile Menu Toggle
+            if (menuToggle && navigation) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navigation.classList.toggle('active');
+                });
+            }
+
+            // 2. Automated Active Page Highlight Tracker
+            // Looks at the URL bar and matches it with your navigation anchor tags
+            const currentUrl = window.location.pathname.split("/").pop() || "index.html";
+            const navLinks = document.querySelectorAll("nav a, .nav-links a");
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute("href");
+                if (linkPage === currentUrl) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // 3. Header Scroll Behavior Collapse
+            window.addEventListener('scroll', () => {
+                if (header) {
+                    if (window.scrollY > 50) {
+                        header.classList.add('collapsed');
+                    } else {
+                        header.classList.remove('collapsed');
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
-
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-</script>
 
 </html>
