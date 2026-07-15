@@ -150,14 +150,15 @@ ul.nav-links li a.active,
    ========================================== */
 .hero {
     background: linear-gradient(rgba(23, 63, 95, 0.4), rgba(23, 63, 95, 0.4)), url('hero-bg.jpg') no-repeat !important;
-    background-position: center 15% !important; 
+    
+    /* THE GOLDEN RATIO: Balances both the top palm leaves and the bottom sand layout */
+    background-position: center 65% !important; 
     background-size: cover !important;
     
-    /* THE FIX: Remove fixed vh and let content + padding dictate a stable height */
     min-height: 450px; 
     display: flex;
     align-items: center;
-    padding: 80px 5% !important; /* Generous vertical padding creates the height naturally */
+    padding: 80px 5% !important; 
     color: #FFFFFF;
     margin-top: -4px !important; 
 }
@@ -373,10 +374,12 @@ footer {
     /* 🎯 UNIVERSAL MOBILE HERO FIX */
     .hero {
         margin-top: -12px !important; 
-        padding-top: 60px !important; /* Adjusted for mobile header spacing */
+        padding-top: 60px !important; 
         padding-bottom: 60px !important;
-        min-height: 320px !important; /* Guarantees it never squishes too small on tiny phones */
-        background-position: center center !important; /* Anchors it cleanly on all screen aspect ratios */
+        min-height: 320px !important; 
+        
+        /* Keeps the exact same balanced crop on mobile screens */
+        background-position: center 65% !important; 
     }
 
     .hero-content h2 {

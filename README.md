@@ -67,3 +67,11 @@ Optimized the global platform structure to ensure fluid responsiveness for trave
 * **Responsive Hamburger Architecture:** Seamless dynamic collapsing of the main navigation menu into a clean vertical touch-accessible drawer.
 * **Sticky Navigation Toggle:** Desktop navigation stays pinned to viewports for quick path execution, while mobile viewports automatically release screen space dynamically when scrolling through content zones.
 * **Fluid Layout Safety Nets:** Transformed standard desktop features and item blocks into responsive single-column structural grids (`1fr`) on tablet and mobile viewports to stop horizontal overflow breakages completely.
+
+## 📝 Recent Updates (July 2026)
+
+* **Synced Multi-Page Layouts:** Standardized the header element selectors and IDs (`#nav-menu` and `#hamburger-btn`) across all pages so global interactive logic hooks execute universally.
+* **Expanded Media Breakpoints:** Shifted the main mobile responsive viewport limit up to `1024px` to cleanly catch tablets (iPads, Surface Pros, Folds) and smart displays that were previously breaking out of the desktop layout boundaries.
+* **Fluid Geometry Overhaul:** Replaced rigid viewport-height (`vh`) mechanics on the hero section with a `min-height` boundary and fluid vertical padding to prevent text from overflowing on different mobile aspect ratios.
+* **Eliminated Layout Horizon Artifacts:** Implemented a targeted negative-offset layout shift to smoothly yank the background image behind the mobile header border, permanently removing the peeking white line artifact.
+* **Optimized Hero Image Crop:** Fine-tuned the vertical asset alignment to a precise `65%` percentage anchor. This captures the ideal visual framing—preserving both the top tropical palm leaf canopy and the lower beach shoreline, umbrellas, and lounge chairs for a premium user experience.
